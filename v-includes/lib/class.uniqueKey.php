@@ -58,17 +58,20 @@
 		$lastCount++;
 		
 		
-		
+		echo '<table>';
 		for($lastCount; $lastCount<=$upperLimit; $lastCount++){
 			//echo $lastCount.'<br>';
-			echo '<table>';
+			
 			echo '<tr>';
 			$hash = $this->hashids->encrypt($lastCount);
+			echo 'http://www.livingmonument.org/registration.php?id='.$hash;
 			echo '</tr>';
-			echo '</table>';
-			echo $hash.'<br>';
+			
+			
 		}
-	 	
+		echo '</table>';
+		//this line was for test
+	 	//print_r($this->hashids->decrypt('VGJlz'));
 	 }
 	 function saveKeys() {
 	 	
